@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashion Vibe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff8f0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #e75480, #ff69b4);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .section-title {
+      color: #e75480;
+      font-weight: bold;
+      margin: 40px 0 20px;
+    }
+    .nav-tabs .nav-link.active {
+      background-color: #e75480;
+      color: white;
+    }
+    .btn-primary {
+      background-color: #e75480;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #c71585;
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>FASHION VIBE</h1>
+    <p>Where Style Meets Elegance</p>
+  </div>
+
+  <div class="container my-5">
+
+    <!-- Tooltips -->
+    <div class="text-center mb-4">
+      <button type="button" class="btn btn-outline-dark me-2" data-bs-toggle="tooltip" title="Latest streetwear and trends">
+        Trending Styles
+      </button>
+      <button type="button" class="btn btn-outline-dark" data-bs-toggle="tooltip" title="Browse top designers worldwide">
+        Meet Designers
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <h2 class="section-title text-center">Explore Fashion</h2>
+    <ul class="nav nav-tabs justify-content-center" id="fashionTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" role="tab">Fashion Design</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="shop-tab" data-bs-toggle="tab" data-bs-target="#shop" role="tab">Buy Clothes</button>
+      </li>
+    </ul>
+    <div class="tab-content border p-4">
+      <div class="tab-pane fade show active" id="design" role="tabpanel">
+        <p>Fashion design blends creativity, culture, and fabric into expressive wearable art. From sketch to stitch, each piece tells a story.</p>
+      </div>
+      <div class="tab-pane fade" id="shop" role="tabpanel">
+        <p>Our curated boutique lets you shop exclusive designs, elegant styles, and limited-edition apparel tailored for you.</p>
+      </div>
+    </div>
+
+    <!-- Carousel Slider -->
+    <h2 class="section-title text-center">Fashion Gallery</h2>
+    <div id="fashionCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Model on runway">
+        </div>
+        <div class="carousel-item">
+          <img src="2.png" class="d-block w-100" alt="Fashion shoot">
+        </div>
+        <div class="carousel-item">
+          <img src="6.png" class="d-block w-100" alt="Street fashion">
+        </div>
+        <div class="carousel-item">
+          <img src="4.png" class="d-block w-100" alt="Designer collection">
+        </div>
+        <div class="carousel-item">
+          <img src="3.png" class="d-block w-100" alt="Designer collection">
+        </div>
+        <div class="carousel-item">
+          <img src="5.png" class="d-block w-100" alt="Designer collection">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#fashionCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#fashionCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Accordion -->
+    <h2 class="section-title text-center">FAQs</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Why choose designer clothes?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Designer clothes offer premium quality, exclusive style, and unique craftsmanship that sets you apart.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            How do I know my size?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Use our size guide or schedule a free virtual fitting with our stylists for accurate measurements.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <h2 class="section-title text-center">Join Our Style Club</h2>
+    <form class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="you@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="styleSelect" class="form-label">Preferred Style</label>
+        <select class="form-select" id="styleSelect">
+          <option>Chic</option>
+          <option>Bohemian</option>
+          <option>Minimalist</option>
+          <option>Streetwear</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Subscribe Now</button>
+    </form>
+
+    <!-- List -->
+    <h2 class="section-title text-center">Top Designers</h2>
+    <ul class="list-group mx-auto" style="max-width: 400px;">
+      <li class="list-group-item">Alexander McQueen</li>
+      <li class="list-group-item">Virgil Abloh</li>
+      <li class="list-group-item">Donatella Versace</li>
+      <li class="list-group-item">Stella McCartney</li>
+    </ul>
+
+    <!-- Modal Button -->
+    <div class="text-center mt-5">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#offerModal">
+        View Exclusive Offer
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="offerModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Limited Offer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Get 30% OFF all designer outfits today only! Use code <strong>STYLE30</strong> at checkout.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Enable tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+  </script>
+
+</body>
+</html>
